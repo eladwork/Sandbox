@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "default_user",
+      "phone": "0000000000",
+      "score": 100
+    },
+    {
+      "id": "Noam",
+      "phone": "0526030020",
+      "score": 90
+    },
+    {
+      "id": "Liad",
+      "phone": "0526030020",
+      "score": 90
+    }
+  ]
+}

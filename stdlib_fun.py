@@ -74,15 +74,20 @@ async def jobAsync():
     async def a():
         for i in range(3):
             print("A", i)
-            time.sleep(0.2)  # ❌ חוסם את הלופ
+            await asyncio.sleep(0.2)
 
     async def b():
         for i in range(3):
             print("B", i)
+            time.sleep(0.2)  # ❌ חוסם את הלופ
+
+    async def c():
+        for i in range(3):
+            print("C", i)
             await asyncio.sleep(0.2)
 
     # Always top level, cannot be inside 'def'
-    await asyncio.gather(a(), b())
+    await asyncio.gather(a(), b(), c())
 
 if __name__ == '__main__':
     main()
